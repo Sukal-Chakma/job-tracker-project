@@ -9,8 +9,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin>
  
 </head>
-<body>
-    <h1>Hello</h1>
+<body class="max-sm:px-2 w-3/4  min-h-screen mx-auto px-20 bg-[#F8FAFC]">
+        <header>
+        <section class=" border-b-2 border-neutral-content pb-7.5">
+            <h3 class="text-3xl font-bold pt-15 mb-4 text-[#002C5C] ">Job Application Tracker</h3>
+            <div class="flex justify-between gap-4">
+                <div class="card w-1/3 bg-base-100 card-xs shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title">Total</h2>
+                        <p id="total" class="text-2xl text-[#002C5C] font-bold">0</p>
+                    </div>
+                </div>
+                <div class="card w-1/3 bg-base-100 card-xs shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title">Interview</h2>
+                        <p id="interview" class="text-[#10B981] text-2xl font-bold">0</p>
+                    </div>
+                </div>
+                <div class="card w-1/3 bg-base-100 card-xs shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title">Rejected</h2>
+                        <p id="rejected" class="text-[#EF4444] text-2xl font-bold">0</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
     
     <script src="javascript/script.js"></script>
 </body>
