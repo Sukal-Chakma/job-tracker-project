@@ -37,3 +37,51 @@ function updatecounts() {
 }
 // call the function 
 updatecounts();
+
+// btn value toggle function 
+
+function toggleStyle(id) {
+    selected = document.getElementById(id);
+    currentStatus = id;
+    updateJobCount();
+    if (id == 'interview-btn') {
+        allcards.classList.add('hidden');
+        filterSection.classList.remove('hidden');
+        renderInterviewList();
+        if (interviewList.length == 0) {
+            filterSection.innerHTML = `
+                <div class="card bg-base-100 w-full shadow-sm">
+                <figure class="px-10 pt-10">
+                    <img src="jobs.png" alt="Shoes" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title font-bold">No jobs available</h2>
+                    <p>Check back soon for new job opportunities</p>
+                </div>
+            </div>
+            `;
+        }
+    }
+    else if (id == 'all-btn') {
+        allcards.classList.remove('hidden');
+        filterSection.classList.add('hidden');
+    }
+    else if (id == 'rejected-btn') {
+        allcards.classList.add('hidden');
+        filterSection.classList.remove('hidden');
+        renderRejectedList();
+        if (rejectedList.length == 0) {
+            filterSection.innerHTML = `
+                <div class="card bg-base-100 w-full shadow-sm">
+                <figure class="px-10 pt-10">
+                    <img src="jobs.png" alt="Shoes" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title font-bold">No jobs available</h2>
+                    <p>Check back soon for new job opportunities</p>
+                </div>
+            </div>
+            `;
+        }
+    }
+}
